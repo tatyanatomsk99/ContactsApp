@@ -92,7 +92,7 @@
             this.linkLabel1.Size = new System.Drawing.Size(171, 13);
             this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "https://vk.com/id139702721";
+            this.linkLabel1.Text = "tatyana99tomsk@gmail.com";
             // 
             // textBox5
             // 

@@ -155,19 +155,5 @@ namespace ContactsApp
             }
         }
 
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

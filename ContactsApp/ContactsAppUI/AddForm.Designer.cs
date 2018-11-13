@@ -110,7 +110,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 6;
-            this.button1.Text = "ok";
+            this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.ButtonSave_Click);
             // 
@@ -130,7 +130,6 @@
             this.SurnameTextBox.Name = "SurnameTextBox";
             this.SurnameTextBox.Size = new System.Drawing.Size(291, 20);
             this.SurnameTextBox.TabIndex = 8;
-            this.SurnameTextBox.Text = "gfjhgfjhgf";
             // 
             // NameTextBox
             // 
@@ -138,7 +137,6 @@
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(291, 20);
             this.NameTextBox.TabIndex = 9;
-            this.NameTextBox.Text = "hjgfjhgfjhgf";
             // 
             // PhoneNumberTextBox
             // 
@@ -146,7 +144,6 @@
             this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
             this.PhoneNumberTextBox.Size = new System.Drawing.Size(292, 20);
             this.PhoneNumberTextBox.TabIndex = 10;
-            this.PhoneNumberTextBox.Text = "71234567890";
             this.PhoneNumberTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PhoneNumberTextBox_KeyPress);
             // 
             // BdateDateTime
@@ -163,7 +160,6 @@
             this.MailTextBox.Name = "MailTextBox";
             this.MailTextBox.Size = new System.Drawing.Size(292, 20);
             this.MailTextBox.TabIndex = 12;
-            this.MailTextBox.Text = "hgfdhgfdhgf";
             // 
             // IDVKTextBox11
             // 
@@ -171,7 +167,6 @@
             this.IDVKTextBox11.Name = "IDVKTextBox11";
             this.IDVKTextBox11.Size = new System.Drawing.Size(292, 20);
             this.IDVKTextBox11.TabIndex = 13;
-            this.IDVKTextBox11.Text = "hjgfjhgfjhgf";
             // 
             // ContactForm
             // 

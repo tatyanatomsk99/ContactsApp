@@ -118,7 +118,6 @@
             this.textBox4.Size = new System.Drawing.Size(45, 13);
             this.textBox4.TabIndex = 4;
             this.textBox4.Text = "Surname:";
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // NameTextBox
             // 
@@ -162,7 +161,6 @@
             this.textBox7.Size = new System.Drawing.Size(41, 13);
             this.textBox7.TabIndex = 9;
             this.textBox7.Text = "Birthday:";
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // MailTextBox
             // 
@@ -301,7 +299,6 @@
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
-            this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem1
             // 

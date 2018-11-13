@@ -16,5 +16,6 @@ namespace ContactsApp
         {
             InitializeComponent();
         }
+
     }
 }
