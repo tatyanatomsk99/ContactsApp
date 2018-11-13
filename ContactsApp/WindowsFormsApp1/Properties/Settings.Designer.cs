@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ContactsApp.Properties
+namespace WindowsFormsApp1.Properties
 {
 
 
