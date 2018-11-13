@@ -11,7 +11,7 @@ using ContactsApp;
 
 namespace ContactsApp
 {
-    //TODO: переименовать в ContactForm!
+    
     public partial class ContactForm : Form
     {
         public ContactForm()
@@ -23,7 +23,7 @@ namespace ContactsApp
 
 
 
-        public Contact Contact
+        public Contact Contact//метод
         {
             get
             {
@@ -55,7 +55,7 @@ namespace ContactsApp
 
             }
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void ButtonSave_Click(object sender, EventArgs e)//добавление контакта в лист и сериализация
         {
             Cont = new Contact();
 
@@ -78,7 +78,7 @@ namespace ContactsApp
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void CloseButton_Click(object sender, EventArgs e)// закрытие addform
         {
             DialogResult = DialogResult.Cancel;
             Close();

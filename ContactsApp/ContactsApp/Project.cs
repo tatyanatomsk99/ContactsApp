@@ -7,14 +7,14 @@ using System.Collections;
 using ContactsApp;
 namespace ContactsApp
 {
-    //TODO: xml
+    
     public class Project
     {
 
         ///<summary>
         ///массив контактов 
         ///</summary>
-        public List<Contact> СontactsList = new List<Contact>();
+        public List<Contact> СontactsList = new List<Contact>();//массив классов
 
     }
 }

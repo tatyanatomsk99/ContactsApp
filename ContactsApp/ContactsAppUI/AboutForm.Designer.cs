@@ -141,6 +141,9 @@
             this.Controls.Add(this.textBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Location = new System.Drawing.Point(400, 400);
+            this.MaximumSize = new System.Drawing.Size(406, 311);
+            this.MinimumSize = new System.Drawing.Size(406, 311);
             this.Name = "AboutForm";
             this.Text = "About";
             this.ResumeLayout(false);

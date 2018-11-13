@@ -8,20 +8,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Globalization;
 using ContactsApp;
-//TODO: изменить пространстао имен
-//TODO: решарпер
+
 namespace ContactsApp
 {
-    //TODO: xml-комментарии. ВЕЗДЕ!
+   
 
     ///<summary>
     /// Класс одного контакта, содержащий фамилию, имя, почту, idvk и номер телефона
     ///</summary>
     public class Contact
     {
-        //TODO: все поля в отдельных строкахж
+   
 
         ///<summary>
         ///Поле фамилии контакта 
@@ -59,7 +58,10 @@ namespace ContactsApp
                 if (value.Length > 50)
                 { throw new ArgumentException("Фамилия должна быть меньше 50 символов"); }
                 else
-                { _Surname = value; }
+                {
+                    TextInfo ti = CultureInfo.CurrentCulture.TextInfo; //верхний кегл 
+                    _Surname = ti.ToTitleCase(value);
+                }
             }
             get { return _Surname; }
         }
@@ -77,7 +79,8 @@ namespace ContactsApp
                 }
                 else
                 {
-                    _Name = value;
+                    TextInfo ti = CultureInfo.CurrentCulture.TextInfo;// верхний кегл
+                    _Name = ti.ToTitleCase(value); ;
                 }
             }
             get { return _Name; }
@@ -131,7 +134,7 @@ namespace ContactsApp
                 DateTime date1 = new DateTime(1900);
                 DateTime date2 = DateTime.Today;
                 if ((value < date1) || (value > date2))
-                { throw new ArgumentException("Дата рождения должна быть корректной"); }
+                { throw new ArgumentException("Дата рождения введена не корректно"); }
                 else
                 { _Bdate = value; }
             }

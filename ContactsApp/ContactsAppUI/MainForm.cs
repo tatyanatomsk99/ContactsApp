@@ -13,8 +13,7 @@ namespace ContactsApp
 {
     public partial class MainForm : Form
     {
-        //TODO: должно быть закрытое и не статическое
-        //TODO: именование
+
         private Project Contacts = new Project();
         public MainForm()
         {
@@ -58,7 +57,7 @@ namespace ContactsApp
             Application.Exit();
         }
 
-        private void EditContact() ///метож для редактирование контакта
+        private void EditContact() ///метод для редактирование контакта
         {
             var sIndex = ContactslistBox.SelectedIndex;
             var inner = new ContactForm();
