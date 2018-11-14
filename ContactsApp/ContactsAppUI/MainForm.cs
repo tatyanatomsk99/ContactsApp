@@ -14,45 +14,32 @@ namespace ContactsApp
     public partial class MainForm : Form
     {
 
-        private Project Contacts = new Project();
+        private Project Contacts = new Project(); // создаем экземпляр класса Project 
         public MainForm()
         {
             InitializeComponent();
-            Contacts = Projectmanager.Deserialization();
+            Contacts = Projectmanager.Deserialization();//выгрузка всех контактов 
             foreach (var contact in Contacts.СontactsList)
             {
-                ContactslistBox.Items.Add(contact.Surname);
+                ContactslistBox.Items.Add(contact.Surname);//отображение всех контактов в листбоксе по фамилии 
             }
         }
        
-
-        
         private void EditButton_Click(object sender, EventArgs e) ///редактирование контакта
         {
-            EditContact();
+            EditContact();//обращение к методу редактирования
         }
 
         private void DeleteButton_Click(object sender, EventArgs e) ///удаление
         {
-            
-                DeleteContact();
-            
-            
+            DeleteContact(); 
         }
         private void AddButton_Click(object sender, EventArgs e) ///добавление нового контакта
         {
             AddContact();
-
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-
-
-        private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem1_Click(object sender, EventArgs e)//закрытие приложение через верхнее меню
         {
             Application.Exit();
         }
@@ -60,15 +47,14 @@ namespace ContactsApp
         private void EditContact() ///метод для редактирование контакта
         {
             var sIndex = ContactslistBox.SelectedIndex;
-            var inner = new ContactForm();
+            var inner = new ContactForm();//создание экземпляра формы 
             if (sIndex == -1)
             {
-
             }
             else
             {
                 inner.Contact = Contacts.СontactsList[sIndex];
-                var result = inner.ShowDialog(this);
+                var result = inner.ShowDialog(this);//открытие формы add
                 if (result == DialogResult.OK)
                 {
                     var upCont = inner.Contact;
@@ -109,7 +95,7 @@ namespace ContactsApp
         private void DeleteContact() ///метод для удаление контакта
         {
             if (MessageBox.Show("Do you really want to remove this contacts: " + Contacts.СontactsList[ContactslistBox.SelectedIndex].Surname,
-"DeleteNote", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+"DeleteContact", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 var selectedIndex = ContactslistBox.SelectedIndex;// вытащили идекс выбранного элемента
                 Contacts.СontactsList.RemoveAt(selectedIndex);
@@ -124,7 +110,7 @@ namespace ContactsApp
 
         private void aboutToolStripMenuItem1_Click(object sender, EventArgs e) //вывод окна информации
         {
-            var aboutForm = new AboutForm();
+            var aboutForm = new AboutForm();//экземпляр формы
             aboutForm.ShowDialog(this);
         }
 

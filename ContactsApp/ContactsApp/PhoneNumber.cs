@@ -29,7 +29,7 @@ namespace ContactsApp
                 }
                 else
                 {
-                    throw new ArgumentException("Номер телефона должен начинаться с <7>");
+                    throw new ArgumentException("Номер телефона должен начинаться с <7> и не превышать 11 цифрам");
                 }
             }
             get { return _Number; }

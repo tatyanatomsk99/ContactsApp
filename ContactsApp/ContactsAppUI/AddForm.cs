@@ -63,7 +63,6 @@ namespace ContactsApp
             try
             {
                 Cont.Number.Number = Convert.ToInt64(PhoneNumberTextBox.Text);
-
                 Cont.Mail = MailTextBox.Text;
                 Cont.IDVK = IDVKTextBox11.Text;
                 Cont.Bdate = BdateDateTime.Value;

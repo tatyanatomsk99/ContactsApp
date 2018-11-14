@@ -51,19 +51,19 @@ namespace ContactsApp
         ///<summary>
         ///Возвращает, задает и, проверяет при вводе, Фамилию контакта 
         ///</summary>
-        public string Surname
+        public string Surname// свойство с исключением 
         {
-            set
+            set//ввод данных
             {
-                if (value.Length > 50)
+                if (value.Length > 50) // условие  
                 { throw new ArgumentException("Фамилия должна быть меньше 50 символов"); }
                 else
                 {
                     TextInfo ti = CultureInfo.CurrentCulture.TextInfo; //верхний кегл 
-                    _Surname = ti.ToTitleCase(value);
+                    _Surname = ti.ToTitleCase(value); //присваение полю введенного значения 
                 }
             }
-            get { return _Surname; }
+            get { return _Surname; } 
         }
 
         ///<summary>
@@ -130,7 +130,6 @@ namespace ContactsApp
         {
             set
             {
-
                 DateTime date1 = new DateTime(1900);
                 DateTime date2 = DateTime.Today;
                 if ((value < date1) || (value > date2))
@@ -143,6 +142,6 @@ namespace ContactsApp
         ///<summary>
         ///Возвращает, задает номер телефона контакта 
         ///</summary>
-        public PhoneNumber Number { set; get; } = new PhoneNumber();
+        public PhoneNumber Number { set; get; } = new PhoneNumber();//инициализация класса PhoneNumber
     }
 }

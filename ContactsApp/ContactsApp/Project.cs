@@ -14,7 +14,7 @@ namespace ContactsApp
         ///<summary>
         ///массив контактов 
         ///</summary>
-        public List<Contact> СontactsList = new List<Contact>();//массив классов
+        public List<Contact> СontactsList = new List<Contact>();//массив контактов 
 
     }
 }

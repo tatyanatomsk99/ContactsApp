@@ -66,7 +66,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ContactslistBox.FormattingEnabled = true;
             this.ContactslistBox.Location = new System.Drawing.Point(12, 51);
-            this.ContactslistBox.MaximumSize = new System.Drawing.Size(350, 950);
+            this.ContactslistBox.MaximumSize = new System.Drawing.Size(289, 950);
             this.ContactslistBox.MinimumSize = new System.Drawing.Size(289, 368);
             this.ContactslistBox.Name = "ContactslistBox";
             this.ContactslistBox.Size = new System.Drawing.Size(289, 368);
@@ -80,14 +80,17 @@
             this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox1.Location = new System.Drawing.Point(12, 28);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(23, 13);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "Find:";
             // 
             // textBox2
             // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Location = new System.Drawing.Point(37, 25);
-            this.textBox2.MaximumSize = new System.Drawing.Size(400, 20);
+            this.textBox2.MaximumSize = new System.Drawing.Size(264, 20);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(264, 20);
             this.textBox2.TabIndex = 3;
@@ -115,6 +118,7 @@
             this.textBox4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox4.Location = new System.Drawing.Point(367, 30);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(45, 13);
             this.textBox4.TabIndex = 4;
             this.textBox4.Text = "Surname:";
@@ -136,8 +140,9 @@
             this.textBox6.BackColor = System.Drawing.SystemColors.Control;
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox6.Location = new System.Drawing.Point(381, 57);
+            this.textBox6.Location = new System.Drawing.Point(381, 56);
             this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(31, 13);
             this.textBox6.TabIndex = 6;
             this.textBox6.Text = "Name:";
@@ -158,6 +163,7 @@
             this.textBox7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox7.Location = new System.Drawing.Point(371, 82);
             this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(41, 13);
             this.textBox7.TabIndex = 9;
             this.textBox7.Text = "Birthday:";
@@ -181,6 +187,7 @@
             this.textBox9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox9.Location = new System.Drawing.Point(381, 131);
             this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(31, 13);
             this.textBox9.TabIndex = 12;
             this.textBox9.Text = "E-mail:";
@@ -204,6 +211,7 @@
             this.textBox11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox11.Location = new System.Drawing.Point(378, 105);
             this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
             this.textBox11.Size = new System.Drawing.Size(34, 13);
             this.textBox11.TabIndex = 10;
             this.textBox11.Text = "Phone:";
@@ -227,6 +235,7 @@
             this.textBox13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox13.Location = new System.Drawing.Point(374, 157);
             this.textBox13.Name = "textBox13";
+            this.textBox13.ReadOnly = true;
             this.textBox13.Size = new System.Drawing.Size(39, 13);
             this.textBox13.TabIndex = 14;
             this.textBox13.Text = "vk.com:";
@@ -303,7 +312,7 @@
             // exitToolStripMenuItem1
             // 
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem1.Text = "Exit";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
             // 
@@ -379,6 +388,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.ContactslistBox);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(857, 531);
             this.Name = "MainForm";

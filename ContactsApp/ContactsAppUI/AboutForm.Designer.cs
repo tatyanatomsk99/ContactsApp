@@ -43,11 +43,11 @@
             this.textBox1.BackColor = System.Drawing.SystemColors.Control;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
             this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.textBox1.Location = new System.Drawing.Point(31, 26);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 23);
+            this.textBox1.Size = new System.Drawing.Size(187, 31);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "ContactsApp";
             // 
@@ -56,7 +56,7 @@
             this.textBox2.BackColor = System.Drawing.SystemColors.Menu;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(35, 55);
+            this.textBox2.Location = new System.Drawing.Point(35, 62);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 13);
             this.textBox2.TabIndex = 1;
@@ -66,10 +66,10 @@
             // 
             this.textBox3.BackColor = System.Drawing.SystemColors.Menu;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(35, 98);
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox3.Location = new System.Drawing.Point(35, 114);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(128, 13);
+            this.textBox3.Size = new System.Drawing.Size(155, 16);
             this.textBox3.TabIndex = 2;
             this.textBox3.Text = "Author: Dubinina Tatyana";
             // 
@@ -77,19 +77,20 @@
             // 
             this.textBox4.BackColor = System.Drawing.SystemColors.Menu;
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(35, 148);
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox4.Location = new System.Drawing.Point(35, 157);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 13);
+            this.textBox4.Size = new System.Drawing.Size(129, 16);
             this.textBox4.TabIndex = 3;
             this.textBox4.Text = "e - mail for feedback:";
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(141, 148);
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.linkLabel1.Location = new System.Drawing.Point(159, 156);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(171, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(209, 17);
             this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "tatyana99tomsk@gmail.com";
@@ -98,19 +99,20 @@
             // 
             this.textBox5.BackColor = System.Drawing.SystemColors.Menu;
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(35, 167);
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox5.Location = new System.Drawing.Point(35, 183);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 13);
+            this.textBox5.Size = new System.Drawing.Size(54, 16);
             this.textBox5.TabIndex = 5;
             this.textBox5.Text = "Git Hub:";
             // 
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(79, 167);
+            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.linkLabel2.Location = new System.Drawing.Point(84, 181);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(208, 13);
+            this.linkLabel2.Size = new System.Drawing.Size(257, 17);
             this.linkLabel2.TabIndex = 6;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "https://github.com/tatyanatomsk99";
@@ -120,7 +122,7 @@
             this.textBox6.BackColor = System.Drawing.SystemColors.Menu;
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox6.Location = new System.Drawing.Point(31, 243);
+            this.textBox6.Location = new System.Drawing.Point(31, 289);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(132, 13);
             this.textBox6.TabIndex = 7;
@@ -130,7 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(386, 268);
+            this.ClientSize = new System.Drawing.Size(455, 328);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.textBox5);
@@ -142,8 +144,8 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Location = new System.Drawing.Point(400, 400);
-            this.MaximumSize = new System.Drawing.Size(406, 311);
-            this.MinimumSize = new System.Drawing.Size(406, 311);
+            this.MaximumSize = new System.Drawing.Size(475, 371);
+            this.MinimumSize = new System.Drawing.Size(475, 371);
             this.Name = "AboutForm";
             this.Text = "About";
             this.ResumeLayout(false);
