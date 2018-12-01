@@ -132,6 +132,7 @@
             // 
             // SurnameTextBox
             // 
+            this.SurnameTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.SurnameTextBox.Location = new System.Drawing.Point(88, 36);
             this.SurnameTextBox.Name = "SurnameTextBox";
             this.SurnameTextBox.Size = new System.Drawing.Size(291, 20);

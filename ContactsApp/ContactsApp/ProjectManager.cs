@@ -11,7 +11,7 @@ namespace ContactsApp
     
     public static class Projectmanager
     {
-        private const string FilePath = @"C:\Users\днс\Documents\ContactsApp.notes";// хранение
+        public static string FilePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/ContactApp.notes";// хранение
 
         ///<summary>
         ///сохраняет список контактов в файл 

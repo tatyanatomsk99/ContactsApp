@@ -1,0 +1,54 @@
+﻿Смирнов
+Игорь
+05.05.2015 0:00:00
+ContactsApp.PhoneNumber
+igor@bk.ru
+id785469
+Иванов
+Константин
+10.02.1995 0:00:00
+ContactsApp.PhoneNumber
+ivan@bk.ru
+id45589
+Сидоров
+Петр
+27.11.1956 0:00:00
+ContactsApp.PhoneNumber
+petr@bk.ru
+id145793
+Смирнов
+Игорь
+05.05.2015 0:00:00
+ContactsApp.PhoneNumber
+igor@bk.ru
+id785469
+Иванов
+Константин
+10.02.1995 0:00:00
+ContactsApp.PhoneNumber
+ivan@bk.ru
+id45589
+Сидоров
+Петр
+27.11.1956 0:00:00
+ContactsApp.PhoneNumber
+petr@bk.ru
+id145793
+Смирнов
+Игорь
+05.05.2015 0:00:00
+ContactsApp.PhoneNumber
+igor@bk.ru
+id785469
+Иванов
+Константин
+10.02.1995 0:00:00
+ContactsApp.PhoneNumber
+ivan@bk.ru
+id45589
+Сидоров
+Петр
+27.11.1956 0:00:00
+ContactsApp.PhoneNumber
+petr@bk.ru
+id145793

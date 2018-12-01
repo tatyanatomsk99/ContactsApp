@@ -23,13 +23,13 @@ namespace ContactsApp
         {
             set
             {
-                if ((value >= 70000000000) && (value/10000000000 == 7))
+                if (value >= 70000000000 && value/10000000000 == 7)
                 {
                     _Number = value;
                 }
                 else
                 {
-                    throw new ArgumentException("Номер телефона должен начинаться с <7> и не превышать 11 цифрам");
+                    throw new ArgumentException("Номер телефона должен начинаться с <7> и не превышать 11 цифр");
                 }
             }
             get { return _Number; }

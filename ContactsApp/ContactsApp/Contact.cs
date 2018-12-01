@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
-using ContactsApp;
 
 namespace ContactsApp
 {
@@ -75,7 +74,7 @@ namespace ContactsApp
             {
                 if (value.Length > 50)
                 {
-                    throw new ArgumentException("Имя должна быть меньше 50 символов");
+                    throw new ArgumentException("Имя должно быть меньше 50 символов");
                 }
                 else
                 {
@@ -114,7 +113,7 @@ namespace ContactsApp
             {
                 if (value.Length > 15)
                 {
-                    throw new ArgumentException("ссылка ВК должна быть меньше 15 символов");
+                    throw new ArgumentException("Cсылка ВК должна быть меньше 15 символов");
                 }
                 else
                 {
@@ -130,7 +129,7 @@ namespace ContactsApp
         {
             set
             {
-                DateTime date1 = new DateTime(1900);
+                DateTime date1 = new DateTime(1900,01,01);
                 DateTime date2 = DateTime.Today;
                 if ((value < date1) || (value > date2))
                 { throw new ArgumentException("Дата рождения введена не корректно"); }
@@ -139,9 +138,18 @@ namespace ContactsApp
             }
             get { return _Bdate; }
         }
+        private PhoneNumber _phoneNumber;
         ///<summary>
         ///Возвращает, задает номер телефона контакта 
         ///</summary>
-        public PhoneNumber Number { set; get; } = new PhoneNumber();//инициализация класса PhoneNumber
+        public PhoneNumber PNumber
+        {
+            set
+            {
+                _phoneNumber = value;
+            }
+            get { return _phoneNumber; }
+        }
+
     }
 }

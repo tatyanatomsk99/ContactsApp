@@ -105,6 +105,12 @@ namespace ContactsApp
                 {
                     ContactslistBox.Items.Add(contact.Surname);
                 }
+                SurnameTextBox.Text = "";
+                NameTextBox.Text = "";
+                BdateDateTime.Value = DateTime.Today;
+                NumberTextBox.Text = "";
+                MailTextBox.Text = "";
+                IDVKextBox.Text = "";
             }
         }
 
@@ -135,7 +141,7 @@ namespace ContactsApp
                 SurnameTextBox.Text = Contacts.СontactsList[ContactslistBox.SelectedIndex].Surname;
                 NameTextBox.Text = Contacts.СontactsList[ContactslistBox.SelectedIndex].Name;
                 BdateDateTime.Value = Contacts.СontactsList[ContactslistBox.SelectedIndex].Bdate;
-                NumberTextBox.Text = Contacts.СontactsList[ContactslistBox.SelectedIndex].Number.Number.ToString();
+                NumberTextBox.Text = Contacts.СontactsList[ContactslistBox.SelectedIndex].PNumber.ToString();
                 MailTextBox.Text = Contacts.СontactsList[ContactslistBox.SelectedIndex].Mail;
                 IDVKextBox.Text = Contacts.СontactsList[ContactslistBox.SelectedIndex].IDVK;
             }

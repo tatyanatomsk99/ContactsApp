@@ -20,15 +20,11 @@ namespace ContactsApp
         }
 
         public Contact Cont;
-
-
+        public PhoneNumber phone;
 
         public Contact Contact//метод
         {
-            get
-            {
-                return Cont;
-            }
+           
             set
             {
                 Cont = value;
@@ -40,7 +36,7 @@ namespace ContactsApp
                     MailTextBox.Text = Cont.Mail;
                     IDVKTextBox11.Text = Cont.IDVK;
                     BdateDateTime.Value = Cont.Bdate;
-                    PhoneNumberTextBox.Text = Cont.Number.Number.ToString();
+                    PhoneNumberTextBox.Text = Cont.PNumber.Number.ToString();
                 }
                 else
                 {
@@ -54,28 +50,96 @@ namespace ContactsApp
                 }
 
             }
+            get
+            {
+                return Cont;
+            }
         }
         private void ButtonSave_Click(object sender, EventArgs e)//добавление контакта в лист и сериализация
         {
             Cont = new Contact();
-
-            Cont.Surname = SurnameTextBox.Text;
+            Cont.PNumber = new PhoneNumber();
             try
             {
-                Cont.Number.Number = Convert.ToInt64(PhoneNumberTextBox.Text);
-                Cont.Mail = MailTextBox.Text;
-                Cont.IDVK = IDVKTextBox11.Text;
-                Cont.Bdate = BdateDateTime.Value;
-                Cont.Name = NameTextBox.Text;
-                DialogResult = DialogResult.OK;
-                Close();
+                if (SurnameTextBox.Text.Length > 1 && SurnameTextBox.Text.Length < 50 && NameTextBox.Text.Length > 1 && NameTextBox.Text.Length < 50 &&
+                   PhoneNumberTextBox.Text.Length == 11 && BdateDateTime.Value > new DateTime(1900, 01, 01) &&
+                   BdateDateTime.Value < DateTime.Today && MailTextBox.Text.Length > 1 && MailTextBox.Text.Length < 15 &&
+                   IDVKTextBox11.Text.Length > 1 && IDVKTextBox11.Text.Length < 15)
+                {
+                    Cont.Surname = SurnameTextBox.Text;
+                    Cont.Name = NameTextBox.Text;
+                    Cont.Bdate = BdateDateTime.Value;
+                    Cont.PNumber.Number = Convert.ToInt64(PhoneNumberTextBox.Text);
+                    Cont.Mail = MailTextBox.Text;
+                    Cont.IDVK = IDVKTextBox11.Text;
+                    DialogResult = DialogResult.OK;
+                    Close();
+                }
+                else
+                {
+                    if (SurnameTextBox.Text.Length > 1 && SurnameTextBox.Text.Length < 50)
+                    {
+                        Cont.Surname = SurnameTextBox.Text;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Введите корректную фамилию контакта", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        SurnameTextBox.BackColor = Color.Red;
+                    }
+                    if (NameTextBox.Text.Length > 1 && NameTextBox.Text.Length < 50)
+                    {
+                        Cont.Name = NameTextBox.Text;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Введите корректное имя контакта", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        NameTextBox.BackColor = Color.Red;
+                    }
+                    if (BdateDateTime.Value > new DateTime(1900, 01, 01) && BdateDateTime.Value < DateTime.Today)
+                    {
+                        Cont.Bdate = BdateDateTime.Value;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Введите корректную дату рождения контакта", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        BdateDateTime.BackColor = Color.Red;
+                    }
+                    if (PhoneNumberTextBox.Text.Length == 11)
+                    {
+                        Cont.PNumber.Number = Convert.ToInt64(PhoneNumberTextBox.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Введите корректный номер телефона контакта", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        PhoneNumberTextBox.BackColor = Color.Red;
+                    }
+                    if (MailTextBox.Text.Length > 1 && MailTextBox.Text.Length < 15)
+                    {
+                        Cont.Mail = MailTextBox.Text;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Введите корректную электронную почту контакта", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MailTextBox.BackColor = Color.Red;
+                    }
+                    if (IDVKTextBox11.Text.Length > 1 && IDVKTextBox11.Text.Length < 15)
+                    {
+                        Cont.IDVK = IDVKTextBox11.Text;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Введите корректное id vk.com контакта", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        IDVKTextBox11.BackColor = Color.Red;
+                    }
+                }
             }
+
             catch (ArgumentException exception)
             {
                 MessageBox.Show(exception.Message);
             }
 
-        }
+         }
 
         private void CloseButton_Click(object sender, EventArgs e)// закрытие addform
         {
@@ -92,6 +156,5 @@ namespace ContactsApp
                 e.Handled = true;
             }
         }
-
     }
 }
