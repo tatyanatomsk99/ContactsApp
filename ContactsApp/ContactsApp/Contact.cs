@@ -1,6 +1,4 @@
-﻿
-
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -138,18 +136,11 @@ namespace ContactsApp
             }
             get { return _Bdate; }
         }
-        private PhoneNumber _phoneNumber;
+
         ///<summary>
         ///Возвращает, задает номер телефона контакта 
         ///</summary>
-        public PhoneNumber PNumber
-        {
-            set
-            {
-                _phoneNumber = value;
-            }
-            get { return _phoneNumber; }
-        }
-
+        public PhoneNumber Number { set; get; } = new PhoneNumber();
+        
     }
 }

@@ -18,7 +18,7 @@ namespace ContactsApp
         public MainForm()
         {
             InitializeComponent();
-            Contacts = Projectmanager.Deserialization();//выгрузка всех контактов 
+            Contacts = Projectmanager.Deserialization(Contacts, Projectmanager.FilePath);//выгрузка всех контактов 
             foreach (var contact in Contacts.СontactsList)
             {
                 ContactslistBox.Items.Add(contact.Surname);//отображение всех контактов в листбоксе по фамилии 
@@ -67,7 +67,7 @@ namespace ContactsApp
                     {
                         ContactslistBox.Items.Add(contact.Surname);
                     }
-                    Projectmanager.Serialization(Contacts);
+                    Projectmanager.Serialization(Contacts, Projectmanager.FilePath);
                 }
             }
         }
@@ -88,7 +88,7 @@ namespace ContactsApp
                 {
                     ContactslistBox.Items.Add(contact.Surname);
                 }
-                Projectmanager.Serialization(Contacts);//сохранили в файл новый массив, с новым контактом
+                Projectmanager.Serialization(Contacts, Projectmanager.FilePath);//сохранили в файл новый массив, с новым контактом
             }
 
         }
@@ -99,7 +99,7 @@ namespace ContactsApp
             {
                 var selectedIndex = ContactslistBox.SelectedIndex;// вытащили идекс выбранного элемента
                 Contacts.СontactsList.RemoveAt(selectedIndex);
-                Projectmanager.Serialization(Contacts);
+                Projectmanager.Serialization(Contacts, Projectmanager.FilePath);
                 ContactslistBox.Items.Clear();
                 foreach (var contact in Contacts.СontactsList)
                 {
@@ -141,7 +141,7 @@ namespace ContactsApp
                 SurnameTextBox.Text = Contacts.СontactsList[ContactslistBox.SelectedIndex].Surname;
                 NameTextBox.Text = Contacts.СontactsList[ContactslistBox.SelectedIndex].Name;
                 BdateDateTime.Value = Contacts.СontactsList[ContactslistBox.SelectedIndex].Bdate;
-                NumberTextBox.Text = Contacts.СontactsList[ContactslistBox.SelectedIndex].PNumber.ToString();
+                NumberTextBox.Text = Contacts.СontactsList[ContactslistBox.SelectedIndex].Number.Number.ToString();
                 MailTextBox.Text = Contacts.СontactsList[ContactslistBox.SelectedIndex].Mail;
                 IDVKextBox.Text = Contacts.СontactsList[ContactslistBox.SelectedIndex].IDVK;
             }

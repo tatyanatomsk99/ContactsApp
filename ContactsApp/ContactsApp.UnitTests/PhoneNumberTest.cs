@@ -34,6 +34,12 @@ namespace ContactsApp.UnitTests
 
             Assert.Throws<ArgumentException>(() => { _Pnumber.Number = wrongNumber.LongCount(); });
         }
+        [Test(Description = "Присвоение корректного номера телефона контакта ")]
+        public void TestNumberSet_CorrectValue()
+        {
+            var expected = 79996190196;
+            _Pnumber.Number = expected;
+        }
 
         [Test(Description = "Позитивный тест для геттерa Number")]
         public void TestNumberGet_CorrectValue()

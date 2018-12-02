@@ -36,7 +36,7 @@ namespace ContactsApp
                     MailTextBox.Text = Cont.Mail;
                     IDVKTextBox11.Text = Cont.IDVK;
                     BdateDateTime.Value = Cont.Bdate;
-                    PhoneNumberTextBox.Text = Cont.PNumber.Number.ToString();
+                    PhoneNumberTextBox.Text = Cont.Number.Number.ToString();
                 }
                 else
                 {
@@ -58,7 +58,7 @@ namespace ContactsApp
         private void ButtonSave_Click(object sender, EventArgs e)//добавление контакта в лист и сериализация
         {
             Cont = new Contact();
-            Cont.PNumber = new PhoneNumber();
+            Cont.Number = new PhoneNumber();
             try
             {
                 if (SurnameTextBox.Text.Length > 1 && SurnameTextBox.Text.Length < 50 && NameTextBox.Text.Length > 1 && NameTextBox.Text.Length < 50 &&
@@ -69,7 +69,7 @@ namespace ContactsApp
                     Cont.Surname = SurnameTextBox.Text;
                     Cont.Name = NameTextBox.Text;
                     Cont.Bdate = BdateDateTime.Value;
-                    Cont.PNumber.Number = Convert.ToInt64(PhoneNumberTextBox.Text);
+                    Cont.Number.Number = Convert.ToInt64(PhoneNumberTextBox.Text);
                     Cont.Mail = MailTextBox.Text;
                     Cont.IDVK = IDVKTextBox11.Text;
                     DialogResult = DialogResult.OK;
@@ -106,14 +106,14 @@ namespace ContactsApp
                     }
                     if (PhoneNumberTextBox.Text.Length == 11)
                     {
-                        Cont.PNumber.Number = Convert.ToInt64(PhoneNumberTextBox.Text);
+                        Cont.Number.Number = Convert.ToInt64(PhoneNumberTextBox.Text);
                     }
                     else
                     {
                         MessageBox.Show("Введите корректный номер телефона контакта", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         PhoneNumberTextBox.BackColor = Color.Red;
                     }
-                    if (MailTextBox.Text.Length > 1 && MailTextBox.Text.Length < 15)
+                    if (MailTextBox.Text.Length > 1 && MailTextBox.Text.Length < 50)
                     {
                         Cont.Mail = MailTextBox.Text;
                     }

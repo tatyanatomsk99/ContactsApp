@@ -13,13 +13,11 @@ namespace ContactsApp.UnitTests
     class ContactTest
     {
         private Contact _cont;
-        private PhoneNumber _pnumber;
 
        [SetUp]
         public void InitContact()
         {
             _cont = new Contact();
-            _pnumber = new PhoneNumber();
         }
         
         [Test(Description = "Присвоение фамилии контакта более 50 символов")]
@@ -28,6 +26,13 @@ namespace ContactsApp.UnitTests
             var wrongSurname = "ИвановСмирновСидоровКличкоПетровКравченкоИвановСмирновСидоровКличкоПетровКравченко";
 
             Assert.Throws<ArgumentException>(() => { _cont.Surname = wrongSurname; });
+        }
+
+        [Test(Description = "Присвоение корректной фамилии контакта менее 50 символов")]
+        public void TestSurnameSet_CorrectValue()
+        {
+            var expected = "Иванов";
+            _cont.Surname = expected;
         }
 
         [Test(Description = "Позитивный тест для геттерa Surname")]
@@ -48,6 +53,13 @@ namespace ContactsApp.UnitTests
             Assert.Throws<ArgumentException>(() => { _cont.Name = wrongName; });
         }
 
+        [Test(Description = "Присвоение корректного имени контакта менее 50 символов ")]
+        public void TestNameSet_CorrectValue()
+        {
+            var expected = "Сергей";
+            _cont.Name = expected;
+        }
+
         [Test(Description = "Позитивный тест для геттерa Name")]
         public void TestNameGet_CorrectValue()
         {
@@ -66,6 +78,13 @@ namespace ContactsApp.UnitTests
             Assert.Throws<ArgumentException>(() => { _cont.Mail = wrongMail; });
         }
 
+        [Test(Description = "Присвоение корректной электронной почты контакта менее 50 символов ")]
+        public void TestMaileSet_CorrectValue()
+        {
+            var expected = "IvanjvSergei@bk.com";
+            _cont.Mail = expected;
+        }
+
         [Test(Description = "Позитивный тест для геттерa Mail")]
         public void TestMailGet_CorrectValue()
         {
@@ -82,6 +101,12 @@ namespace ContactsApp.UnitTests
             var wrongIDVK = "1234567897894561232136484846565458468546549846546";
 
             Assert.Throws<ArgumentException>(() => { _cont.IDVK = wrongIDVK; });
+        }
+        [Test(Description = "Присвоение корректного Id vk.com контакта менеее 15 символов ")]
+        public void TestIDVKSet_CorrectValue()
+        {
+            var expected = "id74589";
+            _cont.IDVK = expected;
         }
 
         [Test(Description = "Позитивный тест для геттерa Idvk")]
@@ -110,6 +135,13 @@ namespace ContactsApp.UnitTests
             Assert.Throws<ArgumentException>(() => { _cont.Bdate = wrongBdate; });
         }
 
+        [Test(Description = "Присвоение корректной даты рождения ")]
+        public void TestBdateSet_CorrectValue()
+        {
+            var expected = new DateTime(2014, 05, 18);
+            _cont.Bdate = expected;
+        }
+
         [Test(Description = "Позитивный тест для геттерa Bdate")]
         public void TestBdateGet_CorrectValue()
         {
@@ -120,28 +152,19 @@ namespace ContactsApp.UnitTests
             Assert.AreEqual(expected, actual, "Геттер возвращает неправильное значение");
         }
 
-        [Test(Description = "Присвоение номера телефона контакта меньше 70000000000")]
-        public void TestNumberSet_inCorrectValue()
+        [Test(Description = "Присвоение корректного номера телефона контакта ")]
+        public void TestNumberSet_CorrectValue()
         {
-            var wrongNumber = "65899874521";
-
-            Assert.Throws<ArgumentException>(() => { _pnumber.Number = wrongNumber.LongCount(); });
-        }
-
-        [Test(Description = "Присвоение номера телефона контакта больше 70000000000")]
-        public void TestNumber2Set_inCorrectValue()
-        {
-            var wrongNumber = "988888888888888";
-
-            Assert.Throws<ArgumentException>(() => { _pnumber.Number = wrongNumber.LongCount(); });
+            var expected = 79996190196;
+            _cont.Number.Number = expected;
         }
 
         [Test(Description = "Позитивный тест для геттерa Number")]
         public void TestNumberGet_CorrectValue()
         {
             var expected = 79996190196;
-            _pnumber.Number = expected;
-            var actual = _pnumber.Number;
+            _cont.Number.Number = expected;
+            var actual = _cont.Number.Number;
 
             Assert.AreEqual(expected, actual, "Геттер возвращает неправильное значение");
         }
