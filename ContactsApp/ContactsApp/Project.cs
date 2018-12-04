@@ -8,6 +8,7 @@ using ContactsApp;
 using System.Collections.Concurrent;
 
 
+
 namespace ContactsApp
 {
     
@@ -19,5 +20,11 @@ namespace ContactsApp
         ///</summary>
         public List<Contact> СontactsList = new List<Contact>();//массив контактов 
 
+        public List<Contact> SortingContacts()//сортировка
+        {
+            var sortedСontactsList = СontactsList.OrderBy(u => u.Surname);
+            return sortedСontactsList.ToList();
+        }
+       
     }
 }

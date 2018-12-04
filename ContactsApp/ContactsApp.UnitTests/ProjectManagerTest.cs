@@ -55,6 +55,7 @@ namespace ContactsApp.UnitTests
             Assert.AreEqual(expectedProject.СontactsList[1].Mail, actualProject.СontactsList[1].Mail);
             Assert.AreEqual(expectedProject.СontactsList[1].IDVK, actualProject.СontactsList[1].IDVK);
         }
+
         [Test(Description = "Тест для проверки сер-ции ")]
         public void SerializerTest()
         {

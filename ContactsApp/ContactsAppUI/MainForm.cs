@@ -19,9 +19,11 @@ namespace ContactsApp
         {
             InitializeComponent();
             Contacts = Projectmanager.Deserialization(Contacts, Projectmanager.FilePath);//выгрузка всех контактов 
+            Contacts.СontactsList = Contacts.SortingContacts();//сортировка
             foreach (var contact in Contacts.СontactsList)
             {
                 ContactslistBox.Items.Add(contact.Surname);//отображение всех контактов в листбоксе по фамилии 
+
             }
         }
        
@@ -62,6 +64,7 @@ namespace ContactsApp
                     Contacts.СontactsList.RemoveAt(sIndex);
                     Contacts.СontactsList.Add(upCont);
 
+                    Contacts.СontactsList = Contacts.SortingContacts();//сортировка
 
                     foreach (var contact in Contacts.СontactsList)
                     {
@@ -83,6 +86,7 @@ namespace ContactsApp
                 ContactslistBox.Items.Clear();// очистили листбокс
                 Contacts.СontactsList.Add(upCont);//добавили в массив контактов, наш новвосозданный контакт
 
+                Contacts.СontactsList = Contacts.SortingContacts();//сортировка
 
                 foreach (var contact in Contacts.СontactsList)//з аполнили лист бокс
                 {
@@ -101,6 +105,9 @@ namespace ContactsApp
                 Contacts.СontactsList.RemoveAt(selectedIndex);
                 Projectmanager.Serialization(Contacts, Projectmanager.FilePath);
                 ContactslistBox.Items.Clear();
+
+                Contacts.СontactsList = Contacts.SortingContacts();//сортировка
+
                 foreach (var contact in Contacts.СontactsList)
                 {
                     ContactslistBox.Items.Add(contact.Surname);
@@ -147,5 +154,9 @@ namespace ContactsApp
             }
         }
 
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
