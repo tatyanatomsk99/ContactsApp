@@ -23,15 +23,15 @@ namespace ContactsApp.UnitTests
             cont1.Surname = "Иванов";
             cont1.Name = "Иван";
             cont1.Bdate = new DateTime(2014, 12, 20);
-            cont1.Number.Number = 79996190196;
+            cont1.Number.Number = 75556664477;
             cont1.Mail = "ivan1212@bk.com";
-            cont1.IDVK = "id1254";
+            cont1.IDVK = "id424245";
             pr.СontactsList.Add(cont1);
 
-            cont2.Surname = "Иванов";
+            cont2.Surname = "Петров";
             cont2.Name = "Сергей";
             cont2.Bdate = new DateTime(1997, 12, 20);
-            cont2.Number.Number = 79996190196;
+            cont2.Number.Number = 77778884455;
             cont2.Mail = "1212@bk.com";
             cont2.IDVK = "id1254";
             pr.СontactsList.Add(cont2);

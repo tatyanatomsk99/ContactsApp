@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;//для верхнего кегля (как сделать)
 using ContactsApp;
 
 namespace ContactsApp
@@ -23,7 +24,6 @@ namespace ContactsApp
             foreach (var contact in Contacts.СontactsList)
             {
                 ContactslistBox.Items.Add(contact.Surname);//отображение всех контактов в листбоксе по фамилии 
-
             }
         }
        
@@ -154,9 +154,16 @@ namespace ContactsApp
             }
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)//поиск
         {
+            var cont = Contacts.SortingContacts(textBox2.Text);
+           
+            ContactslistBox.Items.Clear();
+            foreach (var contact in cont)
+            {
+                ContactslistBox.Items.Add(contact.Surname);
 
+            }
         }
     }
 }

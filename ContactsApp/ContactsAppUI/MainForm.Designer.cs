@@ -70,7 +70,7 @@
             this.ContactslistBox.MinimumSize = new System.Drawing.Size(289, 368);
             this.ContactslistBox.Name = "ContactslistBox";
             this.ContactslistBox.Size = new System.Drawing.Size(289, 368);
-            this.ContactslistBox.TabIndex = 0;
+            this.ContactslistBox.TabIndex = 2;
             this.ContactslistBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // textBox1
@@ -82,7 +82,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(23, 13);
-            this.textBox1.TabIndex = 2;
+            this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Find:";
             // 
             // textBox2
@@ -93,7 +93,7 @@
             this.textBox2.MaximumSize = new System.Drawing.Size(264, 20);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(264, 20);
-            this.textBox2.TabIndex = 3;
+            this.textBox2.TabIndex = 1;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // SurnameTextBox
@@ -107,7 +107,7 @@
             this.SurnameTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.SurnameTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.SurnameTextBox.Size = new System.Drawing.Size(411, 20);
-            this.SurnameTextBox.TabIndex = 5;
+            this.SurnameTextBox.TabIndex = 7;
             this.SurnameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox4
@@ -121,7 +121,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(45, 13);
-            this.textBox4.TabIndex = 4;
+            this.textBox4.TabIndex = 6;
             this.textBox4.Text = "Surname:";
             // 
             // NameTextBox
@@ -132,7 +132,7 @@
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.ReadOnly = true;
             this.NameTextBox.Size = new System.Drawing.Size(411, 20);
-            this.NameTextBox.TabIndex = 7;
+            this.NameTextBox.TabIndex = 9;
             // 
             // textBox6
             // 
@@ -145,7 +145,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(31, 13);
-            this.textBox6.TabIndex = 6;
+            this.textBox6.TabIndex = 8;
             this.textBox6.Text = "Name:";
             // 
             // BdateDateTime
@@ -155,7 +155,7 @@
             this.BdateDateTime.Location = new System.Drawing.Point(418, 79);
             this.BdateDateTime.Name = "BdateDateTime";
             this.BdateDateTime.Size = new System.Drawing.Size(141, 20);
-            this.BdateDateTime.TabIndex = 8;
+            this.BdateDateTime.TabIndex = 11;
             // 
             // textBox7
             // 
@@ -166,7 +166,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(41, 13);
-            this.textBox7.TabIndex = 9;
+            this.textBox7.TabIndex = 10;
             this.textBox7.Text = "Birthday:";
             // 
             // MailTextBox
@@ -177,7 +177,7 @@
             this.MailTextBox.Name = "MailTextBox";
             this.MailTextBox.ReadOnly = true;
             this.MailTextBox.Size = new System.Drawing.Size(411, 20);
-            this.MailTextBox.TabIndex = 13;
+            this.MailTextBox.TabIndex = 15;
             // 
             // textBox9
             // 
@@ -190,7 +190,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(31, 13);
-            this.textBox9.TabIndex = 12;
+            this.textBox9.TabIndex = 14;
             this.textBox9.Text = "E-mail:";
             // 
             // NumberTextBox
@@ -201,7 +201,7 @@
             this.NumberTextBox.Name = "NumberTextBox";
             this.NumberTextBox.ReadOnly = true;
             this.NumberTextBox.Size = new System.Drawing.Size(411, 20);
-            this.NumberTextBox.TabIndex = 11;
+            this.NumberTextBox.TabIndex = 13;
             // 
             // textBox11
             // 
@@ -214,7 +214,7 @@
             this.textBox11.Name = "textBox11";
             this.textBox11.ReadOnly = true;
             this.textBox11.Size = new System.Drawing.Size(34, 13);
-            this.textBox11.TabIndex = 10;
+            this.textBox11.TabIndex = 12;
             this.textBox11.Text = "Phone:";
             // 
             // IDVKextBox
@@ -225,7 +225,7 @@
             this.IDVKextBox.Name = "IDVKextBox";
             this.IDVKextBox.ReadOnly = true;
             this.IDVKextBox.Size = new System.Drawing.Size(411, 20);
-            this.IDVKextBox.TabIndex = 15;
+            this.IDVKextBox.TabIndex = 17;
             // 
             // textBox13
             // 
@@ -238,7 +238,7 @@
             this.textBox13.Name = "textBox13";
             this.textBox13.ReadOnly = true;
             this.textBox13.Size = new System.Drawing.Size(39, 13);
-            this.textBox13.TabIndex = 14;
+            this.textBox13.TabIndex = 16;
             this.textBox13.Text = "vk.com:";
             // 
             // button1
@@ -253,7 +253,7 @@
             this.button1.Location = new System.Drawing.Point(53, 446);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(35, 34);
-            this.button1.TabIndex = 16;
+            this.button1.TabIndex = 4;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.EditButton_Click);
             // 
@@ -269,7 +269,7 @@
             this.button2.Location = new System.Drawing.Point(12, 446);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(35, 34);
-            this.button2.TabIndex = 17;
+            this.button2.TabIndex = 3;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.AddButton_Click);
             // 
@@ -285,7 +285,7 @@
             this.button_delete.Location = new System.Drawing.Point(94, 446);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(35, 34);
-            this.button_delete.TabIndex = 18;
+            this.button_delete.TabIndex = 5;
             this.button_delete.UseVisualStyleBackColor = false;
             this.button_delete.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
@@ -313,7 +313,7 @@
             // exitToolStripMenuItem1
             // 
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem1.Text = "Exit";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
             // 
@@ -330,21 +330,21 @@
             // addContactToolStripMenuItem
             // 
             this.addContactToolStripMenuItem.Name = "addContactToolStripMenuItem";
-            this.addContactToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.addContactToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addContactToolStripMenuItem.Text = "Add Contact";
             this.addContactToolStripMenuItem.Click += new System.EventHandler(this.addContactToolStripMenuItem_Click);
             // 
             // editContactToolStripMenuItem1
             // 
             this.editContactToolStripMenuItem1.Name = "editContactToolStripMenuItem1";
-            this.editContactToolStripMenuItem1.Size = new System.Drawing.Size(162, 22);
+            this.editContactToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.editContactToolStripMenuItem1.Text = "Edit Contact";
             this.editContactToolStripMenuItem1.Click += new System.EventHandler(this.editContactToolStripMenuItem1_Click);
             // 
             // removeContactToolStripMenuItem
             // 
             this.removeContactToolStripMenuItem.Name = "removeContactToolStripMenuItem";
-            this.removeContactToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.removeContactToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.removeContactToolStripMenuItem.Text = "Remove Contact";
             this.removeContactToolStripMenuItem.Click += new System.EventHandler(this.removeContactToolStripMenuItem_Click);
             // 

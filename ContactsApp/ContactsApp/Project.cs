@@ -25,6 +25,11 @@ namespace ContactsApp
             var sortedСontactsList = СontactsList.OrderBy(u => u.Surname);
             return sortedСontactsList.ToList();
         }
-       
+        public List<Contact> SortingContacts(string Find)
+        {
+            var sortedСontactsList = СontactsList.OrderBy(u => u.Surname);
+            var FindsortedСontactsList = sortedСontactsList.ToList().FindAll(t => t.Surname.StartsWith(Find) || t.Name.StartsWith(Find));
+            return FindsortedСontactsList;
+        }
     }
 }
