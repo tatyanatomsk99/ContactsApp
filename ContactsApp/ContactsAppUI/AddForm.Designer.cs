@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContactForm));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -157,7 +158,7 @@
             // 
             this.BdateDateTime.Location = new System.Drawing.Point(88, 90);
             this.BdateDateTime.Name = "BdateDateTime";
-            this.BdateDateTime.Size = new System.Drawing.Size(207, 20);
+            this.BdateDateTime.Size = new System.Drawing.Size(151, 20);
             this.BdateDateTime.TabIndex = 5;
             this.BdateDateTime.Value = new System.DateTime(2018, 10, 3, 0, 0, 0, 0);
             // 
@@ -195,6 +196,7 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ContactForm";
             this.Text = "AddContact";
             this.ResumeLayout(false);

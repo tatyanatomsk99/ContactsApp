@@ -22,6 +22,13 @@ namespace ContactsApp
             Contacts = Projectmanager.Deserialization(Contacts, Projectmanager.FilePath);//выгрузка всех контактов 
             Contacts.СontactsList = Contacts.SortingContacts();//сортировка
             ContactslistBox.KeyDown += new KeyEventHandler(ContactslistBox_Keys);//удаление через delete
+            var ContactBDate = Contacts.BdateContact(DateTime.Today);
+            {
+                foreach(var Cont in ContactBDate)
+                {
+                    BDateListBox.Items.Add(Cont.Surname);
+                }            
+            }
             foreach (var contact in Contacts.СontactsList)
             {
                 ContactslistBox.Items.Add(contact.Surname);//отображение всех контактов в листбоксе по фамилии 
