@@ -21,12 +21,26 @@ namespace ContactsApp
             InitializeComponent();
             Contacts = Projectmanager.Deserialization(Contacts, Projectmanager.FilePath);//выгрузка всех контактов 
             Contacts.СontactsList = Contacts.SortingContacts();//сортировка
+            ContactslistBox.KeyDown += new KeyEventHandler(ContactslistBox_Keys);//удаление через delete
             foreach (var contact in Contacts.СontactsList)
             {
                 ContactslistBox.Items.Add(contact.Surname);//отображение всех контактов в листбоксе по фамилии 
             }
         }
-       
+        /// <summary>
+        /// Метод удаления через Delete.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ContactslistBox_Keys(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                DeleteContact();
+                e.Handled = true;
+            }
+        }
+
         private void EditButton_Click(object sender, EventArgs e) ///редактирование контакта
         {
             EditContact();//обращение к методу редактирования
@@ -45,8 +59,10 @@ namespace ContactsApp
         {
             Application.Exit();
         }
-
-        private void EditContact() ///метод для редактирование контакта
+        /// <summary>
+        /// Метод редактирования контакта.
+        /// </summary>
+        private void EditContact() 
         {
             var sIndex = ContactslistBox.SelectedIndex;
             var inner = new ContactForm();//создание экземпляра формы 
@@ -74,7 +90,10 @@ namespace ContactsApp
                 }
             }
         }
-        private void AddContact()///метод для создание нового контакта
+        /// <summary>
+        /// Метод для создания нового контакта.
+        /// </summary>
+        private void AddContact()
         {
             var sIndex = ContactslistBox.SelectedIndex;// вытащили ндекс выбранного элемента
             var addater = new ContactForm();//создали переменную с типом данных окна, котоорый откроется при нажатии
@@ -96,7 +115,10 @@ namespace ContactsApp
             }
 
         }
-        private void DeleteContact() ///метод для удаление контакта
+        /// <summary>
+        /// Метод для удаления контакта.
+        /// </summary>
+        private void DeleteContact() 
         {
             if (MessageBox.Show("Do you really want to remove this contacts: " + Contacts.СontactsList[ContactslistBox.SelectedIndex].Surname,
 "DeleteContact", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
@@ -165,5 +187,6 @@ namespace ContactsApp
 
             }
         }
+
     }
 }
