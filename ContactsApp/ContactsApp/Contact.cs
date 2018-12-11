@@ -9,16 +9,11 @@ using System.Threading.Tasks;
 using System.Globalization;
 
 namespace ContactsApp
-{
-   
-
-    ///<summary>
+{    ///<summary>
     /// Класс одного контакта, содержащий фамилию, имя, почту, idvk и номер телефона
     ///</summary>
     public class Contact
     {
-   
-
         ///<summary>
         ///Поле фамилии контакта 
         ///</summary>
@@ -50,14 +45,14 @@ namespace ContactsApp
         ///</summary>
         public string Surname// свойство с исключением 
         {
-            set//ввод данных
+            set
             {
                 if (value.Length > 50) // условие  
                 { throw new ArgumentException("Фамилия должна быть меньше 50 символов"); }
                 else
                 {
-                    TextInfo ti = CultureInfo.CurrentCulture.TextInfo; //верхний кегл 
-                    _Surname = ti.ToTitleCase(value); //присваение полю введенного значения 
+                    TextInfo a = CultureInfo.CurrentCulture.TextInfo; //верхний кегл 
+                    _Surname = a.ToTitleCase(value); //присваение полю введенного значения 
                 }
             }
             get { return _Surname; } 

@@ -25,7 +25,7 @@ namespace ContactsApp
         /// <returns></returns>
         public List<Contact> SortingContacts()//сортировка
         {
-            var sortedСontactsList = СontactsList.OrderBy(u => u.Surname);
+            var sortedСontactsList = СontactsList.OrderBy(x => x.Surname);
             return sortedСontactsList.ToList();
         }
         /// <summary>
@@ -35,10 +35,12 @@ namespace ContactsApp
         /// <returns></returns>
         public List<Contact> SortingContacts(string Find)
         {
-            var sortedСontactsList = СontactsList.OrderBy(u => u.Surname);
-            var FindsortedСontactsList = sortedСontactsList.ToList().FindAll(t => t.Surname.StartsWith(Find) || t.Name.StartsWith(Find));
+            var sortedСontactsList = СontactsList.OrderBy(x => x.Surname);
+            var FindsortedСontactsList = sortedСontactsList.ToList().FindAll(x => x.Surname.StartsWith(Find) || x.Name.StartsWith(Find));
             return FindsortedСontactsList;
+          
         }
+
         /// <summary>
         /// Метод для проверки даты рождения (именниники).
         /// </summary>
@@ -54,6 +56,6 @@ namespace ContactsApp
                     contacts.Add(СontactsList[i]);
                 }
             return contacts.ToList();
-        }
+        }      
     }
 }

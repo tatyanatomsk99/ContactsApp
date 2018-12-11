@@ -38,5 +38,6 @@ namespace ContactsApp.UnitTests
             Projectmanager.Serialization(pr, filePath);
 
         }
+
     }
 }

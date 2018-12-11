@@ -24,10 +24,10 @@ namespace ContactsApp
             ContactslistBox.KeyDown += new KeyEventHandler(ContactslistBox_Keys);//удаление через delete
             var ContactBDate = Contacts.BdateContact(DateTime.Today);
             {
-                foreach(var Cont in ContactBDate)
+                foreach (var Cont in ContactBDate)
                 {
                     BDateListBox.Items.Add(Cont.Surname);
-                }            
+                }
             }
             foreach (var contact in Contacts.СontactsList)
             {
@@ -55,7 +55,7 @@ namespace ContactsApp
 
         private void DeleteButton_Click(object sender, EventArgs e) ///удаление
         {
-            DeleteContact(); 
+            DeleteContact();
         }
         private void AddButton_Click(object sender, EventArgs e) ///добавление нового контакта
         {
@@ -69,7 +69,7 @@ namespace ContactsApp
         /// <summary>
         /// Метод редактирования контакта.
         /// </summary>
-        private void EditContact() 
+        private void EditContact()
         {
             var sIndex = ContactslistBox.SelectedIndex;
             var inner = new ContactForm();//создание экземпляра формы 
@@ -125,7 +125,7 @@ namespace ContactsApp
         /// <summary>
         /// Метод для удаления контакта.
         /// </summary>
-        private void DeleteContact() 
+        private void DeleteContact()
         {
             if (MessageBox.Show("Do you really want to remove this contacts: " + Contacts.СontactsList[ContactslistBox.SelectedIndex].Surname,
 "DeleteContact", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
@@ -186,7 +186,7 @@ namespace ContactsApp
         private void textBox2_TextChanged(object sender, EventArgs e)//поиск
         {
             var cont = Contacts.SortingContacts(textBox2.Text);
-           
+
             ContactslistBox.Items.Clear();
             foreach (var contact in cont)
             {
@@ -194,6 +194,6 @@ namespace ContactsApp
 
             }
         }
-
+     
     }
 }
