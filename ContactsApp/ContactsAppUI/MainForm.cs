@@ -22,13 +22,15 @@ namespace ContactsApp
             Contacts = Projectmanager.Deserialization(Contacts, Projectmanager.FilePath);//выгрузка всех контактов 
             Contacts.СontactsList = Contacts.SortingContacts();//сортировка
             ContactslistBox.KeyDown += new KeyEventHandler(ContactslistBox_Keys);//удаление через delete
-            var ContactBDate = Contacts.BdateContact(DateTime.Today);
+
+            var ContactBDate = Contacts.BdateContact(DateTime.Today);//имен-ки
             {
                 foreach (var Cont in ContactBDate)
                 {
                     BDateListBox.Items.Add(Cont.Surname);
                 }
             }
+
             foreach (var contact in Contacts.СontactsList)
             {
                 ContactslistBox.Items.Add(contact.Surname);//отображение всех контактов в листбоксе по фамилии 
@@ -114,7 +116,7 @@ namespace ContactsApp
 
                 Contacts.СontactsList = Contacts.SortingContacts();//сортировка
 
-                foreach (var contact in Contacts.СontactsList)//з аполнили лист бокс
+                foreach (var contact in Contacts.СontactsList)//заполнили листбокс
                 {
                     ContactslistBox.Items.Add(contact.Surname);
                 }
@@ -127,11 +129,20 @@ namespace ContactsApp
         /// </summary>
         private void DeleteContact()
         {
-            if (MessageBox.Show("Do you really want to remove this contacts: " + Contacts.СontactsList[ContactslistBox.SelectedIndex].Surname,
-"DeleteContact", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            if (MessageBox.Show("Do you really want to remove this contacts: " +
+                Contacts.SortingContacts(textBox2.Text)[ContactslistBox.SelectedIndex].Surname,
+                "DeleteContact", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 var selectedIndex = ContactslistBox.SelectedIndex;// вытащили идекс выбранного элемента
-                Contacts.СontactsList.RemoveAt(selectedIndex);
+                if(textBox2.Text == "")
+                {
+                    Contacts.СontactsList.RemoveAt(selectedIndex);
+                }
+                else
+                {
+                    Contacts.СontactsList.RemoveAt(Contacts.СontactsList.IndexOf(Contacts.SortingContacts(textBox2.Text)[ContactslistBox.SelectedIndex]));
+                }
+                
                 Projectmanager.Serialization(Contacts, Projectmanager.FilePath);
                 ContactslistBox.Items.Clear();
 
@@ -156,7 +167,7 @@ namespace ContactsApp
             aboutForm.ShowDialog(this);
         }
 
-        private void addContactToolStripMenuItem_Click(object sender, EventArgs e) //создание контакта, через верхнее еню
+        private void addContactToolStripMenuItem_Click(object sender, EventArgs e) //создание контакта, через верхнее меню
         {
             AddContact();
         }
@@ -173,6 +184,7 @@ namespace ContactsApp
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (ContactslistBox.SelectedIndex != -1)
+            if (textBox2.Text == "")
             {
                 SurnameTextBox.Text = Contacts.СontactsList[ContactslistBox.SelectedIndex].Surname;
                 NameTextBox.Text = Contacts.СontactsList[ContactslistBox.SelectedIndex].Name;
@@ -181,6 +193,15 @@ namespace ContactsApp
                 MailTextBox.Text = Contacts.СontactsList[ContactslistBox.SelectedIndex].Mail;
                 IDVKextBox.Text = Contacts.СontactsList[ContactslistBox.SelectedIndex].IDVK;
             }
+            else
+                {
+                    SurnameTextBox.Text = Contacts.SortingContacts(textBox2.Text)[ContactslistBox.SelectedIndex].Surname;
+                    NameTextBox.Text = Contacts.SortingContacts(textBox2.Text)[ContactslistBox.SelectedIndex].Name;
+                    BdateDateTime.Value = Contacts.SortingContacts(textBox2.Text)[ContactslistBox.SelectedIndex].Bdate;
+                    NumberTextBox.Text = Contacts.SortingContacts(textBox2.Text)[ContactslistBox.SelectedIndex].Number.Number.ToString();
+                    MailTextBox.Text = Contacts.SortingContacts(textBox2.Text)[ContactslistBox.SelectedIndex].Mail;
+                    IDVKextBox.Text = Contacts.SortingContacts(textBox2.Text)[ContactslistBox.SelectedIndex].IDVK;
+                }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)//поиск
